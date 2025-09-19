@@ -1,0 +1,121 @@
+/* 全局樣式 */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Microsoft JhengHei', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* 儀表板網格布局 */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 10%;
+}
+
+/* 學生卡牌設計 */
+.student-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border-top: 5px solid #4a90e2; /* 預設邊框顏色 */
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 卡牌頭部 */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.student-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.student-level {
+    background-color: #f0f2f5;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #555;
+}
+
+/* 六維屬性列表 */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.stat-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* 六維屬性顏色代號 */
+.stat-item[data-stat="INT"] .stat-icon { background-color: #4A90E2; } /* 智力-藍 */
+.stat-item[data-stat="STR"] .stat-icon { background-color: #D0021B; } /* 體力-紅 */
+.stat-item[data-stat="FOC"] .stat-icon { background-color: #BD10E0; } /* 專注-紫 */
+.stat-item[data-stat="MOR"] .stat-icon { background-color: #F5A623; } /* 品德-橙 */
+.stat-item[data-stat="COOP"] .stat-icon { background-color: #7ED321; } /* 合作-綠 */
+.stat-item[data-stat="CRE"] .stat-icon { background-color: #F78DA7; } /* 創意-粉 */
+
+.stat-name {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* 轉職與技能 */
+.job-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.job-title {
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+.job-skill {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
